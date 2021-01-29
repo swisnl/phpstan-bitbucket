@@ -1,0 +1,3 @@
+services:
+    errorFormatter.bitbucket:
+        class: Alxt\PHPStan\ErrorFormatter\BitbucketErrorFormatter
