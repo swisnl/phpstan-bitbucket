@@ -79,16 +79,12 @@ class BitbucketApiClient
 
     private function buildReportUrl(?UuidInterface $uuid = null): string
     {
-        $namespace = getenv('BITBUCKET_REPO_OWNER');
-        $slug = getenv('BITBUCKET_REPO_SLUG');
-        $commitHash = getenv('BITBUCKET_COMMIT');
-
         return sprintf(
             'repositories/%s/%s/commit/%s/reports/%s',
-            $namespace,
-            $slug,
-            $commitHash,
-            $uuid !== null ? '{' . $uuid->toString() . '}' : $this->buildReportName()
+            BitbucketConfig::repoOwner(),
+            BitbucketConfig::repoSlug(),
+            BitbucketConfig::commit(),
+            $uuid !== null ? '{'.$uuid->toString().'}' : $this->buildReportName()
         );
     }
 
@@ -103,15 +99,11 @@ class BitbucketApiClient
 
     private function buildReportName(): string
     {
-        $repoSlug = getenv('BITBUCKET_REPO_SLUG');
-
-        return $repoSlug . '-' . Uuid::uuid4()->toString();
+        return BitbucketConfig::repoSlug().'-'.Uuid::uuid4()->toString();
     }
 
     private function buildAnnotationName(): string
     {
-        $repoSlug = getenv('BITBUCKET_REPO_SLUG');
-
-        return $repoSlug . '-annotation-' . Uuid::uuid4()->toString();
+        return BitbucketConfig::repoSlug().'-annotation-'.Uuid::uuid4()->toString();
     }
 }

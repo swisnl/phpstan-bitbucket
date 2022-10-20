@@ -14,9 +14,7 @@ class BitbucketErrorFormatter implements ErrorFormatter
 
     public function __construct()
     {
-        RequirementsValidator::validate();
-
-        $this->relativePathHelper = new ParentDirectoryRelativePathHelper(getenv('BITBUCKET_CLONE_DIR'));
+        $this->relativePathHelper = new ParentDirectoryRelativePathHelper(BitbucketConfig::cloneDir());
         $this->apiClient = new BitbucketApiClient();
     }
 
