@@ -4,11 +4,11 @@
     "license": "MIT",
     "type": "phpstan-extension",
     "require": {
-        "php": "~7.1",
+        "php": "^7.4|^8.0",
         "ext-json": "*",
-        "phpstan/phpstan": "^0.12",
-        "guzzlehttp/guzzle": "^6.5",
-        "ramsey/uuid": "^3.9"
+        "phpstan/phpstan": "^1.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "ramsey/uuid": "^4.0"
     },
     "authors": [
         {
