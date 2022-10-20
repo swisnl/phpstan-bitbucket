@@ -1,21 +1,30 @@
 {
     "name": "alxt/phpstan-bitbucket",
-    "description": "PHPStan error formatter for Bitbucket Pipeline Reports",
-    "license": "MIT",
     "type": "phpstan-extension",
-    "require": {
-        "php": "^7.4|^8.0",
-        "ext-json": "*",
-        "phpstan/phpstan": "^1.0",
-        "guzzlehttp/guzzle": "^7.0",
-        "ramsey/uuid": "^4.0"
-    },
+    "description": "PHPStan error formatter for Bitbucket Pipeline Reports",
+    "keywords": [
+        "phpstan",
+        "error-formatter",
+        "bitbucket",
+        "pipeline",
+        "reports",
+        "testing"
+    ],
+    "homepage": "https://github.com/modprobe/phpstan-bitbucket",
+    "license": "MIT",
     "authors": [
         {
             "name": "Alexander Timmermann",
             "email": "alex@timmermann.me"
         }
     ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.0",
+        "phpstan/phpstan": "^1.0",
+        "ramsey/uuid": "^4.0"
+    },
     "autoload": {
         "psr-4": {
             "Alxt\\PHPStan\\ErrorFormatter\\": "src"
@@ -27,5 +36,8 @@
                 "extension.neon"
             ]
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
