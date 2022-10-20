@@ -14,7 +14,7 @@ class BitbucketApiClient
 
     private const REPORT_TITLE = 'PHPStan Report';
 
-    private $httpClient;
+    private Client $httpClient;
 
     public function __construct(string $baseUrl = self::BASE_URL, string $proxyUrl = self::PROXY_URL)
     {

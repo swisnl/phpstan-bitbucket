@@ -9,8 +9,8 @@ use PHPStan\File\ParentDirectoryRelativePathHelper;
 
 class BitbucketErrorFormatter implements ErrorFormatter
 {
-    private $relativePathHelper;
-    private $apiClient;
+    private ParentDirectoryRelativePathHelper $relativePathHelper;
+    private BitbucketApiClient $apiClient;
 
     public function __construct()
     {
