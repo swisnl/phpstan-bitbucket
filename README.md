@@ -1,5 +1,9 @@
 # PHPStan Bitbucket error formatter
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Total Downloads][ico-downloads]][link-downloads]
+
 This PHPStan error formatter will add annotations in Bitbucket, for example in pull requests, similar to the built-in GitHub formatting.
 
 ## Installation
@@ -36,9 +40,18 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
-- [Alexander Timmermann](https://github.com/modprobe)
-- [All Contributors](../../contributors)
+- [Alexander Timmermann][link-author]
+- [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/alxt/phpstan-bitbucket.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/alxt/phpstan-bitbucket.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/alxt/phpstan-bitbucket
+[link-downloads]: https://packagist.org/packages/alxt/phpstan-bitbucket
+[link-author]: https://github.com/modprobe
+[link-contributors]: ../../contributors
