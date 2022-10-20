@@ -14,6 +14,7 @@ class BitbucketErrorFormatter implements ErrorFormatter
 
     public function __construct()
     {
+        // @phpstan-ignore-next-line
         $this->relativePathHelper = new ParentDirectoryRelativePathHelper(BitbucketConfig::cloneDir());
         $this->apiClient = new BitbucketApiClient();
     }
@@ -26,6 +27,7 @@ class BitbucketErrorFormatter implements ErrorFormatter
             $this->apiClient->addAnnotation(
                 $reportUuid,
                 $error->getMessage(),
+                // @phpstan-ignore-next-line
                 $this->relativePathHelper->getRelativePath($error->getFile()),
                 $error->getLine()
             );

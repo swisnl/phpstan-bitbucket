@@ -22,7 +22,7 @@ class BitbucketApiClient
     public function __construct(string $baseUrl = self::BASE_URL, string $proxyUrl = self::PROXY_URL)
     {
         $this->httpClient = new Client([
-            'base_uri'            => $baseUrl,
+            'base_uri' => $baseUrl,
             RequestOptions::PROXY => $proxyUrl,
         ]);
     }
@@ -31,16 +31,16 @@ class BitbucketApiClient
     {
         $payload = $numberOfIssues > 0
             ? [
-                'title'       => self::REPORT_TITLE,
-                'details'     => sprintf('This PR introduces %d new issue(s).', $numberOfIssues),
+                'title' => self::REPORT_TITLE,
+                'details' => sprintf('This PR introduces %d new issue(s).', $numberOfIssues),
                 'report_type' => 'BUG',
-                'result'      => 'FAILED',
+                'result' => 'FAILED',
             ]
             : [
-                'title'       => self::REPORT_TITLE,
-                'details'     => 'This PR introduces no new issues.',
+                'title' => self::REPORT_TITLE,
+                'details' => 'This PR introduces no new issues.',
                 'report_type' => 'BUG',
-                'result'      => 'PASSED',
+                'result' => 'PASSED',
             ];
 
         $result = $this->httpClient->put($this->buildReportUrl(), [
@@ -60,7 +60,7 @@ class BitbucketApiClient
     ): UuidInterface {
         $payload = [
             'annotation_type' => 'BUG',
-            'summary'         => $summary,
+            'summary' => $summary,
         ];
 
         if ($filePath !== null) {
