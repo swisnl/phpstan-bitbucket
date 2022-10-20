@@ -1,6 +1,7 @@
 {
     "name": "alxt/phpstan-bitbucket",
     "description": "PHPStan error formatter for Bitbucket Pipeline Reports",
+    "license": "MIT",
     "type": "phpstan-extension",
     "require": {
         "php": "~7.1",
