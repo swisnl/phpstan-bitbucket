@@ -9,3 +9,4 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 ### Changed
 - Bumped minimum PHP version to 7.4 and add support for PHP 8.
 - Bumped dependencies.
+- This error formatter will now also report errors using the default table error formatter.
