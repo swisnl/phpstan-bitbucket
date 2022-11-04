@@ -11,7 +11,9 @@ use PHPStan\File\ParentDirectoryRelativePathHelper;
 class BitbucketErrorFormatter implements ErrorFormatter
 {
     private TableErrorFormatter $tableErrorFormatter;
+
     private ParentDirectoryRelativePathHelper $relativePathHelper;
+
     private BitbucketApiClient $apiClient;
 
     public function __construct(TableErrorFormatter $tableErrorFormatter)

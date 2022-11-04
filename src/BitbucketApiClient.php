@@ -13,6 +13,7 @@ class BitbucketApiClient
      * Please note this should be http instead of https because of the proxy.
      */
     private const BASE_URL = 'http://api.bitbucket.org/2.0/';
+
     private const PROXY_URL = 'http://localhost:29418';
 
     private const REPORT_TITLE = 'PHPStan Report';
