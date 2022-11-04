@@ -1,5 +1,5 @@
 {
-    "name": "alxt/phpstan-bitbucket",
+    "name": "swisnl/phpstan-bitbucket",
     "type": "phpstan-extension",
     "description": "PHPStan error formatter for Bitbucket Pipeline Reports",
     "keywords": [
@@ -10,12 +10,18 @@
         "reports",
         "testing"
     ],
-    "homepage": "https://github.com/modprobe/phpstan-bitbucket",
+    "homepage": "https://github.com/swisnl/phpstan-bitbucket",
     "license": "MIT",
     "authors": [
         {
             "name": "Alexander Timmermann",
             "email": "alex@timmermann.me"
+        },
+        {
+            "name": "Jasper Zonneveld",
+            "email": "jasper@swis.nl",
+            "homepage": "https://github.com/JaZo",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -27,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Alxt\\PHPStan\\ErrorFormatter\\": "src"
+            "Swis\\PHPStan\\ErrorFormatter\\": "src"
         }
     },
     "extra": {

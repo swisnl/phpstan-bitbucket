@@ -11,7 +11,7 @@ This PHPStan error formatter will add annotations in Bitbucket, for example in p
 Via Composer
 
 ```bash
-composer require --dev alxt/phpstan-bitbucket
+composer require --dev swisnl/phpstan-bitbucket
 ```
 
 If you also have [phpstan/extension-installer](https://github.com/phpstan/extension-installer) installed, then you're all set!
@@ -23,7 +23,7 @@ If you don't want to use `phpstan/extension-installer`, include extension.neon i
 
 ```neon
 includes:
-    - vendor/alxt/phpstan-bitbucket/extension.neon
+    - vendor/swisnl/phpstan-bitbucket/extension.neon
 ```
 </details>
 
@@ -40,6 +40,8 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
+This package is a fork of [alxt/phpstan-bitbucket][link-fork] with some updates.
+
 - [Alexander Timmermann][link-author]
 - [All Contributors][link-contributors]
 
@@ -47,11 +49,12 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/alxt/phpstan-bitbucket.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/swisnl/phpstan-bitbucket.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/alxt/phpstan-bitbucket.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/swisnl/phpstan-bitbucket.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/alxt/phpstan-bitbucket
-[link-downloads]: https://packagist.org/packages/alxt/phpstan-bitbucket
+[link-packagist]: https://packagist.org/packages/swisnl/phpstan-bitbucket
+[link-downloads]: https://packagist.org/packages/swisnl/phpstan-bitbucket
+[link-fork]: https://github.com/modprobe/phpstan-bitbucket
 [link-author]: https://github.com/modprobe
 [link-contributors]: ../../contributors

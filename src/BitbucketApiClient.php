@@ -1,6 +1,6 @@
 <?php
 
-namespace Alxt\PHPStan\ErrorFormatter;
+namespace Swis\PHPStan\ErrorFormatter;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
