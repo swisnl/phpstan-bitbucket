@@ -46,6 +46,10 @@
             ]
         }
     },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
     "config": {
         "sort-packages": true
     }
