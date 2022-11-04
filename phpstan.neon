@@ -1,0 +1,12 @@
+includes:
+    - ./extension.neon
+
+parameters:
+    paths:
+        - src
+
+    level: 8
+
+    ignoreErrors:
+
+    excludePaths:
