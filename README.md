@@ -36,6 +36,11 @@ To use this custom error formatter you need to run PHPStan with `--error-format=
 vendor/bin/phpstan analyse src -l8 --error-format=bitbucket
 ```
 
+## Screenshots
+
+![Annotations](img/annotations.png)
+![Report](img/report.png)
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
