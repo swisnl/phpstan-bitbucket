@@ -6,6 +6,11 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 
 ## [Unreleased]
 
+_ Nothing.
+
+
+## [0.3.0] - 2023-12-22
+
 ### Changed
 
 - Bumped minimum PHP version to 8.0.
