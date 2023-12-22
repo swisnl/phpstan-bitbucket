@@ -6,7 +6,12 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 
 ## [Unreleased]
 
-- Nothing
+### Changed
+
+- Bumped minimum PHP version to 8.0.
+- Report title is now simply "PHPStan".
+- Moved several base classes to [swisnl/bitbucket-reports](https://github.com/swisnl/bitbucket-reports).
+
 
 ## [0.2.0] - 2022-11-04
 

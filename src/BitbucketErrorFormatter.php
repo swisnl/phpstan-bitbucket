@@ -1,26 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\PHPStan\ErrorFormatter;
 
 use PHPStan\Command\AnalysisResult;
 use PHPStan\Command\ErrorFormatter\ErrorFormatter;
 use PHPStan\Command\ErrorFormatter\TableErrorFormatter;
 use PHPStan\Command\Output;
-use PHPStan\File\ParentDirectoryRelativePathHelper;
+use Swis\Bitbucket\Reports\BitbucketApiClient;
 
 class BitbucketErrorFormatter implements ErrorFormatter
 {
-    private TableErrorFormatter $tableErrorFormatter;
+    private const REPORT_TITLE = 'PHPStan';
 
-    private ParentDirectoryRelativePathHelper $relativePathHelper;
+    private TableErrorFormatter $tableErrorFormatter;
 
     private BitbucketApiClient $apiClient;
 
     public function __construct(TableErrorFormatter $tableErrorFormatter)
     {
         $this->tableErrorFormatter = $tableErrorFormatter;
-        // @phpstan-ignore-next-line
-        $this->relativePathHelper = new ParentDirectoryRelativePathHelper(BitbucketConfig::cloneDir());
         $this->apiClient = new BitbucketApiClient();
     }
 
@@ -28,14 +28,13 @@ class BitbucketErrorFormatter implements ErrorFormatter
     {
         $this->tableErrorFormatter->formatErrors($analysisResult, $output);
 
-        $reportUuid = $this->apiClient->createReport($analysisResult->getTotalErrorsCount());
+        $reportUuid = $this->apiClient->createReport(self::REPORT_TITLE, $analysisResult->getTotalErrorsCount());
 
         foreach ($analysisResult->getFileSpecificErrors() as $error) {
             $this->apiClient->addAnnotation(
                 $reportUuid,
                 $error->getMessage(),
-                // @phpstan-ignore-next-line
-                $this->relativePathHelper->getRelativePath($error->getFile()),
+                $error->getFile(),
                 $error->getLine()
             );
         }
