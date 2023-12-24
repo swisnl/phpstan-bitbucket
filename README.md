@@ -38,8 +38,8 @@ vendor/bin/phpstan analyse src -l8 --error-format=bitbucket
 
 ## Screenshots
 
-![Annotations](img/annotations.png)
-![Report](img/report.png)
+![Annotations](/img/annotations.png)
+![Report](/img/report.png)
 
 ## Changelog
 
