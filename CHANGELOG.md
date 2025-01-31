@@ -6,7 +6,14 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 
 ## [Unreleased]
 
-_ Nothing.
+- Nothing.
+
+
+## [0.4.0] - 2025-01-31
+
+### Added
+
+- Added support for PHPStan 2 [#1](https://github.com/swisnl/phpstan-bitbucket/pull/1).
 
 
 ## [0.3.0] - 2023-12-22
